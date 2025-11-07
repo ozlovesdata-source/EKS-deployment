@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: <BACKEND_IMAGE_PLACEHOLDER> # We will replace this
+        ports:
+        - containerPort: 8080 # Port your backend app listens on
+        envFrom:
+        - secretRef:
+            name: db-credentials
