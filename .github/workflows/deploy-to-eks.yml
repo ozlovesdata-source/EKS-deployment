@@ -79,8 +79,8 @@ jobs:
 
           # Update the kustomization.yaml to point to the new images
           cd k8s
-          kustomize edit set image <BACKEND_IMAGE_PLACEHOLDER>=${{ secrets.ECR_REPOSITORY_BACKEND }}:${{ env.IMAGE_TAG }}
-          kustomize edit set image <FRONTEND_IMAGE_PLACEHOLDER>=${{ secrets.ECR_REPOSITORY_FRONTEND }}:${{ env.IMAGE_TAG }}
+          kustomize edit set image '<BACKEND_IMAGE_PLACEHOLDER>'=${{ secrets.ECR_REPOSITORY_BACKEND }}:${{ env.IMAGE_TAG }}
+          kustomize edit set image '<FRONTEND_IMAGE_PLACEHOLDER>'=${{ secrets.ECR_REPOSITORY_FRONTEND }}:${{ env.IMAGE_TAG }}
 
       - name: Deploy to EKS
         run: |
