@@ -3,6 +3,15 @@
 }
 
 .u-section-1 .u-text-1 {
-  margin-bottom: 60px;
+  margin-bottom: 0;
   font-weight: 700;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: none;
+  border-style: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 0 auto 60px 0;
 }
